@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+    <link rel="stylesheet" href="my css.css">
+</head>
+<body style="background-color: #ececec;">
+
+
+    <div >
+        <nav class="fares1">
+            <h3 href="#">OUR TEAM</h3>
+            <ul class="ul">
+                <a href="#"><li><button>Home</button></li></a>
+                <a href="#"><li><button>Team</button></li></a>
+                <a href="#"><li><button>Stats</button></li></a>
+                <a href="#"><li><button>Contacts</button></li></a>
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <div class="divfirst">
+        <h1>Our Professional Team</h1>
+        <p>We are Team of skilled Professionals in development and design Working Together To Provide the best technical solutions for our client  </p>
+    </div>
+
+
+    <h1>Team Members</h1>
+    <div class="divsecond">
+        <div class="divthird">
+
+            <div>
+                <img src="WhatsApp Image 2025-06-29 at 22.12.10_a1d75fe9.jpg" >
+                <div>
+                    <h4>Fares Mohamed</h4>
+                    <h4 class="h">web dev</h4>
+                    <p>Fares Mohamed is an experienced full‑stack web developer and technical founder, leading development and engineering teams at tech startups. 
+                        He is skilled in front‑end technologies (HTML, CSS, JavaScript), back‑end frameworks, API security, and React Native migrations—as showcased in his technical blog posts.</p>
+                    <ul>
+                        <li>Html</li>
+                        <li>Css</li>
+                        <li>Js</li>
+                        
+                    </ul>
+                    <button class="button_1">View Profile</button>
+                    <button class="button_2">Contacts</button>
+                </div>
+            </div>
+
+            <div>
+                <img src="WhatsApp Image 2025-06-29 at 22.31.16_f4cb678e.jpg" >
+                <div>
+                    <h4>Lionel Messi</h4>
+                    <h4 class="h">professional footballer</h4>
+                    <p>Lionel Messi is an Argentine professional footballer widely regarded as one of the greatest players of all time.</p>
+                    <ul>
+                        <li>BAR</li>
+                        <li>PSG</li>
+                        <li>ARG</li>
+                        
+                    </ul>
+                    <button class="button_1">View Profile</button>
+                    <button class="button_2">Contacts</button>
+                </div>
+            </div>
+
+
+            <div>
+                <img src="https://static.independent.co.uk/2024/01/13/20/1930383623.jpg?width=1200&height=1200&fit=crop" >
+                <div>
+                    <h4>professional footballer</h4>
+                    <h4 class="h"></h4>
+                    <p> Kevin De Bruyne is a Belgian professional footballer known for his exceptional vision, passing, and creativity. He plays as a midfielder for Manchester City and the Belgium national team. Widely regarded as one of the best midfielders of his generation</p>
+                    <ul>
+                        <li>CITY</li>
+                        <li>NAP</li>
+                        <li>BEL</li>
+                        
+                    </ul>
+                    <button class="button_1">View Profile</button>
+                    <button class="button_2">Contacts</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="button"> 
+    <button class="bu" id="add"> Add Card</button> 
+    <button  class="but" id="rem" > Remove Last Card</button></div>
+</div>
+
+    <div class="div_3">
+        <h3>Our Team Stats</h3>
+        <ul class="ul_1">
+            <li>15+</li>
+            <li>50+</li>
+            <li>100%</li>
+            <li>10+</li>
+        </ul>
+        <ul class="ul_2">
+            <li>combind years of experience</li>
+            <li>completed projects</li>
+            <li>client satisfaction</li>
+            <li>mastered technologies</li>
+        </ul>
+    </div>
+
+
+    <footer>
+        <p> Our Team. All Rights Reserved.</p>
+        <br>
+        <p>Email: info@team.com | Phone : 01098718759 </p>
+    </footer>
+    <script>
+        const addButton = document.getElementById('add');
+        const removeButton = document.getElementById('rem');
+        const cardsContainer = document.querySelector('.divsecond .divthird ');
+    
+        const cardTemplate = `
+            <div>
+                <img src="WhatsApp Image 2025-06-29 at 22.12.10_a1d75fe9.jpg">
+                <div>
+                    <h4>New Member</h4>
+                    <h4 class="h">New Role</h4>
+                    <p>New member description goes here. Add your custom text.</p>
+                    <ul>
+                        <li>Skill 1</li>
+                        <li>Skill 2</li>
+                        <li>Skill 3</li>
+                        <li>Skill 4</li>
+                    </ul>
+                    <button class="button_1">View Profile</button>
+                    <button class="button_2">Contacts</button>
+                </div>
+            </div>
+        `;
+    
+        addButton.addEventListener('click', () => {
+            const newCard = document.createElement('div');
+            newCard.innerHTML = cardTemplate;
+            cardsContainer.appendChild(newCard);
+        });
+    
+        removeButton.addEventListener('click', () => {
+            if (cardsContainer.lastElementChild) {
+                cardsContainer.removeChild(cardsContainer.lastElementChild);
+            }
+        });
+    </script>
+</body>
+</html>
